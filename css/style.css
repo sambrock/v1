@@ -1,0 +1,13 @@
+/* fonts */
+
+/* heading*/ @import url('https://fonts.googleapis.com/css?family=Rubik');
+/* body */ @import url('https://fonts.googleapis.com/css?family=Karla');
+
+/* colours */
+
+/* header */
+.background{
+    background-image: url("img/bg.jpg") center no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+}
