@@ -15,20 +15,30 @@ body{
 h1,h2,h3,h4,h5{
     font-family: 'Rubik', helvetica,sans-serif;
     color: #fff;
+    text-align: center;
 }
 h1{
     font-size: 4em;
 }
-p{
+h3{
+    color: #000;
+    font-size: 1.5em;
+}
+p, h4{
     font-family: 'Karla', arial,sans-serif;;
-    font-size: 1.625em;
+    font-size: 1.425em;
     color: #fff;
+    text-align: center;
+}
+h4{
+    color: #BE1E2D;
+    font-weight: 100;
 }
 
 /* header */
 header {
     width: 100%;
-    position: fixed;
+    position: absolute;
     height: 6em;
     background: transparent;
     z-index: 1;
@@ -40,6 +50,8 @@ header #logo {
     height: 70px;
     padding: 20px 0 0 0;
 }
+
+/* hero */
 #hero{
     background: url("../img/bg.jpg") center no-repeat;
     background-size: cover;
@@ -54,4 +66,58 @@ header #logo {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+
+/* skills */
+#my-skills{
+    background: #27AAE1;
+    position: relative;
+    height: 600px;
+}
+#skills-container{
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 33%);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    top: -90px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.column{
+    height: auto;
+    background: #fff;
+    padding: 25px;
+}
+.column:nth-child(1){
+    grid-column: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px #d5d5d5 solid;
+}
+.column:nth-child(2){
+    grid-column: 2;
+    border-top: 1px #d5d5d5 solid;
+    border-bottom: 1px #d5d5d5 solid;
+}
+.column:nth-child(3){
+    grid-column: 3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px #d5d5d5 solid;
+}
+.skill-icon{
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+}
+.column h3, .column h4{
+    margin-bottom: 0;
+}
+
+.column p{
+    color: #000;
+    font-size: 1.25em;
 }
