@@ -70,14 +70,13 @@ header #logo {
 
 /* skills */
 #my-skills{
-    background: #27AAE1;
     position: relative;
-    height: 600px;
+    height: 350px;
 }
 #skills-container{
     display: grid;
     position: absolute;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 33.33%);
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -85,24 +84,25 @@ header #logo {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+
 }
-.column{
+.skill-col{
     height: auto;
     background: #fff;
     padding: 25px;
 }
-.column:nth-child(1){
+.skill-col:nth-child(1){
     grid-column: 1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border: 1px #d5d5d5 solid;
 }
-.column:nth-child(2){
+.skill-col:nth-child(2){
     grid-column: 2;
     border-top: 1px #d5d5d5 solid;
     border-bottom: 1px #d5d5d5 solid;
 }
-.column:nth-child(3){
+.skill-col:nth-child(3){
     grid-column: 3;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -113,11 +113,75 @@ header #logo {
     display: block;
     margin: 0 auto;
 }
-.column h3, .column h4{
+.skill-col h3, .skill-col h4{
     margin-bottom: 0;
 }
-
-.column p{
+.skill-col p{
     color: #000;
     font-size: 1.25em;
+}
+
+/* about */
+#about{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 50px;
+    border-bottom: 1px #d5d5d5 solid;
+}
+#about p{
+    color: #000;
+    font-size: 1.25em;
+}
+
+/* work */
+#my-work{
+
+}
+#work-container{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 300px);
+    width: 1200px;
+    margin: 0 auto;
+}
+.work-col:nth-child(1){
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0 10px 0 0;
+}
+.work-col:nth-child(2){
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 10px 0 ;
+}
+.work-col:nth-child(3){
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0 0px 0 10px;
+}
+.work-col:nth-child(4){
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 10px 0 0;
+}
+.work-col:nth-child(5){
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 10px 0 ;
+}
+.work-col:nth-child(6){
+    grid-column: 3;
+    grid-row: 2;
+    margin: 0 0px 0 10px;
+}
+.work-img{
+    width: 100%;
+    height: 246px;
+    cursor: pointer;
+}
+.work-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
 }
