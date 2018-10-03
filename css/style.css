@@ -36,8 +36,9 @@ h4{
 }
 a{
     font-family: 'Karla', arial,sans-serif;
-    font-size: 1.25em;
+    font-size: 1em;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 /* header */
 header {
@@ -215,7 +216,7 @@ header #logo {
     display: block;
 }
 .learn-more-btn, .visit-website-btn{
-    padding: 10px 20px;
+    padding: 10px 30px;
     color: #fff;
     border-radius: 50px;
     margin-top: 100px;
@@ -225,5 +226,29 @@ header #logo {
     border: 2px #BE1E2D solid;
 }
 .visit-website-btn{
-    border: 2px #27AAE1 solid;
+    border: 2px #fff solid;
+}
+.visit-website-btn::after{
+    background-image: url("../img/right-arrow.png");
+    background-size: 6px 9px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content:"";
+    margin-left: 8px;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+.learn-more-btn:hover{
+    background: #DE3141;
+    border: 2px #DE3141 solid;
+}
+.visit-website-btn:hover{
+    border: 2px #3DB3E4 solid;
+    color: #3DB3E4;
+}
+.visit-website-btn:hover::after{
+    background-image: url("../img/right-arrow-hover.png");
+    content:"";
 }
