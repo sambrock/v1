@@ -68,6 +68,7 @@ header #logo {
     height: 80vh;
     width: 100%;
     position: relative;
+/*    filter: brightness(0.9);*/
 }
 .hero-txt{
     text-align: center;
@@ -76,12 +77,12 @@ header #logo {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    min-width: 330px;
 }
 
 /* skills */
 #my-skills{
     position: relative;
-    height: 315px;
 }
 #skills-container{
     display: grid;
@@ -152,7 +153,6 @@ header #logo {
 /* work */
 #my-work{
     border-top: 1px solid #d5d5d5;
-    margin-bottom: 65px;
 }
 #my-work h3{
     margin: 55px 0;
@@ -167,7 +167,7 @@ header #logo {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     max-width: 1200px;
-    margin: 0 auto 65px;
+    margin: 0 auto;
 }
 .work-col{
     position: relative;
@@ -177,7 +177,6 @@ header #logo {
     grid-row: 1;
     -ms-grid-column:1;
     -ms-grid-row:1;
-
 }
 .work-col:nth-child(2){
     grid-column: 2;
@@ -210,8 +209,6 @@ header #logo {
     -ms-grid-row:2;
 }
 .work-img{
-    width: 100%;
-    height: 100%;
     cursor: pointer;
     overflow: hidden;
     border-radius: 20px;
@@ -222,27 +219,26 @@ header #logo {
     object-fit: cover;
     transition: 0.4s ease-in-out;
 }
-.work-img img:hover{
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-.work-info{
+.work-info-container{
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 260px;
+    height: 100%;
     background: #0E4962;
     border-radius: 20px;
     text-align: center;
 }
-.work-info-container{
-    margin-top: 50px;
+.work-info{
+    padding: 5%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-.work-info-btns{
-    margin-top: 50px;
+.work-info p{
+    margin-top: 0;
 }
 .learn-more-btn, .visit-website-btn{
     padding: 10px 20px;
@@ -252,11 +248,11 @@ header #logo {
 .learn-more-btn{
     background: #BE1E2D;
     border: 2px #BE1E2D solid;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .visit-website-btn{
     border: 2px #fff solid;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .visit-website-btn::after, .see-more-btn::after{
     background-image: url("../img/right-arrow.png");
@@ -284,7 +280,7 @@ header #logo {
 }
 .see-more-container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 55px auto;
     text-align: center;
 }
 .see-more-btn{
@@ -315,7 +311,7 @@ footer{
 #footer-logo{
     width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 55px;
 }
 #footer-email{
     margin: 20px 0 50px;
@@ -358,14 +354,23 @@ i{
 }
 
 /* responsive styles */
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1260px) {
     #skills-container, #work-container, #about{
         max-width: 1000px;
         height: auto;
     }
+    #hero{
+
+    }
+    #my-skills, #about{
+        margin: 0 20px;
+    }
     #work-container{
         grid-template-columns: repeat(3, 320px);
         grid-template-rows: repeat(2, 200px);
+    }
+    .learn-more-btn, .visit-website-btn{
+        padding: 10px 15px;
     }
 }
 @media screen and (max-width: 1060px){
@@ -373,7 +378,7 @@ i{
         max-width: 1020px;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(3, 260px);
-        margin: 0 20px;
+        margin: 0 40px 0 20px;
     }
     .work-col:nth-child(1){
         grid-column: 1;
@@ -386,21 +391,18 @@ i{
         grid-row: 1;
         -ms-grid-column:2;
         -ms-grid-row:1;
-
     }
     .work-col:nth-child(3){
         grid-column: 1;
         grid-row: 2;
         -ms-grid-column:3;
         -ms-grid-row:1;
-
     }
     .work-col:nth-child(4){
         grid-column: 2;
         grid-row: 2;
         -ms-grid-column:1;
         -ms-grid-row:2;
-
     }
     .work-col:nth-child(5){
         grid-column: 1;
@@ -416,4 +418,106 @@ i{
         -ms-grid-row:2;
     }
 }
-
+@media screen and (max-width: 760px){
+    #skills-container{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 100%);
+    }
+    .skill-col:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .skill-col:nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+        border: 0;
+        border-left: 1px #d5d5d5 solid;
+        border-right: 1px #d5d5d5 solid;
+    }
+    .skill-col:nth-child(3){
+        grid-column: 1;
+        grid-row: 3;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    #work-container{
+        max-width: 770px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 460px);
+        margin: 0 20px;
+    }
+    .work-col:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+        -ms-grid-column:1;
+        -ms-grid-row:1;
+    }
+    .work-col:nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+        -ms-grid-column:2;
+        -ms-grid-row:1;
+    }
+    .work-col:nth-child(3){
+        grid-column: 1;
+        grid-row: 3;
+        -ms-grid-column:3;
+        -ms-grid-row:1;
+    }
+    .work-col:nth-child(4){
+        grid-column: 1;
+        grid-row: 4;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
+    }
+    .work-col:nth-child(5){
+        grid-column: 1;
+        grid-row: 5;
+        -ms-grid-column:2;
+        -ms-grid-row:2;
+    }
+    .work-col:nth-child(6){
+        grid-column: 1;
+        grid-row: 6;
+        -ms-grid-column:3;
+        -ms-grid-row:2;
+    }
+    .learn-more-btn, .visit-website-btn{
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 560px){
+    #work-container{
+        grid-template-rows: repeat(6, 420px);
+    }
+}
+@media screen and (max-width: 660px){
+    #work-container{
+        grid-template-rows: repeat(6, 360px);
+    }
+}
+@media screen and (max-width: 560px){
+    #work-container{
+        grid-template-rows: repeat(6, 300px);
+    }
+}
+@media screen and (max-width: 460px){
+    header #logo{
+        height: 50px;
+    }
+    h1{
+        font-size: 2.3em;
+    }
+    p{
+        font-size: 1.4em;
+    }
+    #work-container{
+        grid-template-rows: repeat(6, 240px);
+    }
+}

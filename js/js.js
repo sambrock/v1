@@ -4,8 +4,22 @@ $(".work-col").mouseenter(function(e){
     e.preventDefault;
 })
 
-$(".work-info").mouseleave(function(e){
-    var info = $(".work-info");
+$(".work-info-container").mouseleave(function(e){
+    var info = $(".work-info-container");
     info.fadeOut(300);
     e.preventDefault;
+})
+
+function resize(){
+    var parent = $("#my-skills")
+    var child = $("#skills-container").height();
+    parent.css("height", child-90);
+}
+
+$(window).on('resize', function(e) {
+    resize();
+});
+
+$( document ).ready(function(){
+    resize();
 })
