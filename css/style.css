@@ -160,13 +160,13 @@ header #logo {
 #work-container{
     display: grid;
     display:-ms-grid;
-    grid-template-columns: repeat(3, 33.3%);
+    grid-template-columns: repeat(3, 386.66px);
     grid-template-rows: repeat(2, 260px);
     -ms-grid-columns: repeat(3, 400px);
     -ms-grid-rows: repeat(2, 100%);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto 65px;
 }
 .work-col{
@@ -293,7 +293,6 @@ header #logo {
     border-radius: 50px;
     background: #27AAE1;
     border: 2px #27AAE1 solid;
-    margin-right: 10px;
     font-size: 1.25em;
 }
 .see-more-btn::after{
@@ -365,6 +364,7 @@ i{
         height: auto;
     }
     #work-container{
+        grid-template-columns: repeat(3, 320px);
         grid-template-rows: repeat(2, 200px);
     }
 }
@@ -376,44 +376,44 @@ i{
         margin: 0 20px;
     }
     .work-col:nth-child(1){
-    grid-column: 1;
-    grid-row: 1;
-    -ms-grid-column:1;
-    -ms-grid-row:1;
-}
-.work-col:nth-child(2){
-    grid-column: 2;
-    grid-row: 1;
-    -ms-grid-column:2;
-    -ms-grid-row:1;
+        grid-column: 1;
+        grid-row: 1;
+        -ms-grid-column:1;
+        -ms-grid-row:1;
+    }
+    .work-col:nth-child(2){
+        grid-column: 2;
+        grid-row: 1;
+        -ms-grid-column:2;
+        -ms-grid-row:1;
 
-}
-.work-col:nth-child(3){
-    grid-column: 1;
-    grid-row: 2;
-    -ms-grid-column:3;
-    -ms-grid-row:1;
+    }
+    .work-col:nth-child(3){
+        grid-column: 1;
+        grid-row: 2;
+        -ms-grid-column:3;
+        -ms-grid-row:1;
 
-}
-.work-col:nth-child(4){
-    grid-column: 2;
-    grid-row: 2;
-    -ms-grid-column:1;
-    -ms-grid-row:2;
+    }
+    .work-col:nth-child(4){
+        grid-column: 2;
+        grid-row: 2;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
 
-}
-.work-col:nth-child(5){
-    grid-column: 1;
-    grid-row: 3;
-    -ms-grid-column:2;
-    -ms-grid-row:2;
+    }
+    .work-col:nth-child(5){
+        grid-column: 1;
+        grid-row: 3;
+        -ms-grid-column:2;
+        -ms-grid-row:2;
 
-}
-.work-col:nth-child(6){
-    grid-column: 2;
-    grid-row: 3;
-    -ms-grid-column:3;
-    -ms-grid-row:2;
-}
+    }
+    .work-col:nth-child(6){
+        grid-column: 2;
+        grid-row: 3;
+        -ms-grid-column:3;
+        -ms-grid-row:2;
+    }
 }
 
