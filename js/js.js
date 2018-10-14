@@ -1,17 +1,28 @@
 //JS document -
 //Created by Sam Brocklehurst
 
-$(".work-col").mouseenter(function(e){
-    var info = $(this).children().next();
-    info.fadeIn(300);
-    e.preventDefault;
-})
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(".work-col").on("click", function(){
+        var allInfo = $(".work-col").children().next();
+        allInfo.fadeOut(300);
+        var thisInfo = $(this).children().next();
+        thisInfo.fadeIn(300);
+        e.preventDefault;
+    })
 
-$(".work-info-container").mouseleave(function(e){
-    var info = $(".work-info-container");
-    info.fadeOut(300);
-    e.preventDefault;
-})
+}else{
+    $(".work-col").mouseenter(function(e){
+        var info = $(this).children().next();
+        info.fadeIn(300);
+        e.preventDefault;
+    })
+
+    $(".work-info-container").mouseleave(function(e){
+        var info = $(".work-info-container");
+        info.fadeOut(300);
+        e.preventDefault;
+    })
+}
 
 //Resize parent element depending on absolute positined child element
 function resize(){
@@ -35,4 +46,3 @@ $( document ).ready(function(){
     resize();
     ifEdge();
 })
-
