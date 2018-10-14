@@ -1,15 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Sam Brocklehurst</title>
+        <title>Sam Brocklehurst - Portfolio</title>
+        <meta charset="UTF-8">
         <link rel="icon" href="img/sb.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     </head>
     <body>
         <header>
             <nav>
-                <img id="logo" src="img/logo.svg">
+                <img id="logo" src="img/logo.svg" alt="Sam Brocklehurst logo">
             </nav>
         </header>
         <section id="hero">
@@ -21,90 +24,112 @@
         <section id="my-skills">
             <div id="skills-container">
                 <div class="skill-col">
-                    <img class="skill-icon" src="img/web-design.svg">
+                    <img class="skill-icon" src="img/web-design.svg" alt="web design icon">
                     <h3>Web Design</h3>
                     <p>I like to create simple and clean websites, keeping user-friendliness in mind.</p>
                     <h4>Design Tools:</h4>
                     <p>Photoshop, Illustrator, Marvel, Pen &amp; Paper</p>
                 </div>
                 <div class="skill-col">
-                    <img class="skill-icon" src="img/front-end-design.svg">
+                    <img class="skill-icon" src="img/front-end-design.svg" alt="front end development icon">
                     <h3>Front-end Dev</h3>
                     <p>Coding has become my passion, and I enjoy being able to bring my ideas to life.</p>
                     <h4>Languages:</h4>
                     <p>HTML, CSS, JavaScript, jQuery</p>
                 </div>
                 <div class="skill-col">
-                    <img class="skill-icon" src="img/responsive-design.svg">
+                    <img class="skill-icon" src="img/responsive-design.svg" alt="responsive design icon">
                     <h3>Responsive Design</h3>
-                    <p>With the growing popularity of mobile usage now surpassing desktop, I know take a mobile-first approach to my web designs.  </p>
+                    <p>With mobile usage now overtaking desktop, I've began to take a mobile-first approach to my web designs.</p>
                 </div>
             </div>
         </section>
         <section id="about">
             <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>I'm a second year student and the University of Huddersfield. While my focus is front-end web development, I'm excited to be learning more back-end technologies this year. When I'm not working on uni assignments I enjoy playing 5-a-side football with my friends or playing computer games.</p>
         </section>
         <section id="my-work">
             <h3>My Work</h3>
             <div id="work-container">
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-legend.jpg">
+                        <img src="img/work-legend-2.jpg" alt="Legend website cover">
                     </div>
                     <div class="work-info-container">
                         <div class="work-info">
-                            <p>A website produced form start to finish. From inital designs to a finished product.</p>
+                            <p>A website I designed and built from the scratch in my spare time.</p>
                             <div class="work-info-btns">
-                                <a class="learn-more-btn">Learn More</a>
-                                <a class="visit-website-btn">Visit Website</a>
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70648045/LEGEND" target="_blank">Learn More</a>
+                                <a class="visit-website-btn" href="" target="_blank">Visit Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-guitar-city.jpg">
+                        <img src="img/work-hfax.jpg" alt="Halifax 5-a-side website cover">
                     </div>
                     <div class="work-info-container">
-                        <a class="learn-more-btn">Learn More</a>
-                        <a class="visit-website-btn">Visit Website</a>
+                        <div class="work-info">
+                            <p>The first website I created as part of my web programming module at university.</p>
+                            <div class="work-info-btns">
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70693751/Halifax-5-a-side" target="_blank">Learn More</a>
+                                <a class="visit-website-btn" href="https://selene.hud.ac.uk/u1663363/assign/index.html" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-instabid.jpg">
+                        <img src="img/work-instabid.jpg" alt="Instabid website cover">
                     </div>
                     <div class="work-info-container">
-                        <a class="learn-more-btn">Learn More</a>
-                        <a class="visit-website-btn">Visit Website</a>
+                        <div class="work-info">
+                            <p>A dynamic, database driven auction website created in Visual Studio.</p>
+                            <div class="work-info-btns">
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70698459/InstaBid" target="_blank">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-hotel.jpg">
+                        <img src="img/work-guitar-city.jpg" alt="Guitar City brand identity cover">
                     </div>
                     <div class="work-info-container">
-                        <a class="learn-more-btn">Learn More</a>
-                        <a class="visit-website-btn">Visit Website</a>
+                        <div class="work-info">
+                            <p>A complete brand identity for the London based musical instrument retailer Guitar City.</p>
+                            <div class="work-info-btns">
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70649671/Guitar-City" target="_blank">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-hfax.jpg">
+                        <img src="img/work-spaceweb.jpg" alt="Space Web animated advertisement cover">
                     </div>
                     <div class="work-info-container">
-                        <a class="learn-more-btn">Learn More</a>
-                        <a class="visit-website-btn">Visit Website</a>
+                        <div class="work-info">
+                            <p>An interactive, animated advertisement for satellite internet provider SpaceWeb.</p>
+                            <div class="work-info-btns">
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70697411/SPACEWEB" target="_blank">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="work-col">
                     <div class="work-img">
-                        <img src="img/work-fireworks-store.jpg">
+                        <img src="img/work-hotel.jpg" alt="Hotel search engine cover">
                     </div>
                     <div class="work-info-container">
-                        <a class="learn-more-btn">Learn More</a>
-                        <a class="visit-website-btn">Visit Website</a>
+                        <div class="work-info">
+                            <p>A hotel search engine programmed using JavaScript as part of a uni assignment.</p>
+                            <div class="work-info-btns">
+                                <a class="learn-more-btn" href="https://www.behance.net/gallery/70650351/Hotel-Search-Engine" target="_blank">Learn More</a>
+                                <a class="visit-website-btn" href="https://selene.hud.ac.uk/u1663363/assign2/" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +140,7 @@
         <footer>
             <div class="footer-container">
                 <div id="footer-logo">
-                    <img src="img/sb-footer.png" height="50">
+                    <img src="img/sb-footer.png" height="50" alt="Sam Brocklehurst logo">
                 </div>
                 <div id="social">
                     <a class="social-btn" href="https://twitter.com/SxmBrock" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -128,8 +153,6 @@
                 </div>
             </div>
         </footer>
-        <script src="http://code.jquery.com/jquery-latest.min.js"
-                type="text/javascript"></script>
-        <script src="js/js.js" type="text/javascript"></script>
+        <script src="js/js.min.js"></script>
     </body>
 </html>
