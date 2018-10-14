@@ -1,5 +1,21 @@
-/* fonts */
+/* CSS Document -
+Created by Sam Brocklehurst */
+/*
 
+1. Font imports
+2. Colours
+3. Global
+4. Header
+5. Hero
+6. Skills
+7. About
+8. Work
+9. Footer
+10. Responsive styles
+
+*/
+
+/* fonts */
 /* heading*/ @import url('https://fonts.googleapis.com/css?family=Rubik');
 /* body */ @import url('https://fonts.googleapis.com/css?family=Karla');
 
@@ -68,7 +84,6 @@ header #logo {
     height: 80vh;
     width: 100%;
     position: relative;
-/*    filter: brightness(0.9);*/
 }
 .hero-txt{
     text-align: center;
@@ -78,6 +93,7 @@ header #logo {
     transform: translate(-50%, -50%);
     color: white;
     min-width: 330px;
+    max-width: 1200px;
 }
 
 /* skills */
@@ -161,11 +177,10 @@ header #logo {
     display: grid;
     display:-ms-grid;
     grid-template-columns: repeat(3, 386.66px);
-    grid-template-rows: repeat(2, 260px);
-    -ms-grid-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 100%);
+    -ms-grid-columns: repeat(3, 386.66px);
     -ms-grid-rows: repeat(2, 100%);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -212,12 +227,14 @@ header #logo {
     cursor: pointer;
     overflow: hidden;
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 .work-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
 }
 .work-info-container{
     display: none;
@@ -301,7 +318,7 @@ header #logo {
 
 /* footer */
 footer{
-    height: 300px;
+    padding-bottom: 40px;
     background: #101010;
 }
 .footer-container{
@@ -343,9 +360,6 @@ i{
 .social-btn:hover i:nth-child(odd){
     color: #BE1E2D;
 }
-#footer-copyright{
-    margin: 50px 0 ;
-}
 #footer-copyright p{
     color: #4A4A4A;
 }
@@ -362,22 +376,29 @@ i{
     #hero{
 
     }
-    #my-skills, #about{
+    #my-skills{
         margin: 0 20px;
     }
     #work-container{
         grid-template-columns: repeat(3, 320px);
-        grid-template-rows: repeat(2, 200px);
+        grid-template-rows: repeat(2, 100%);
+        -ms-grid-columns: repeat(3, 320px);
+        -ms-grid-rows: repeat(2, 100%);
     }
     .learn-more-btn, .visit-website-btn{
         padding: 10px 15px;
     }
 }
 @media screen and (max-width: 1060px){
+    #about{
+        margin: 0 20px;
+    }
     #work-container{
         max-width: 1020px;
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(3, 260px);
+        grid-template-rows: repeat(3, 100%);
+        -ms-grid-columns: repeat(2, 50%);
+        -ms-grid-rows: repeat(3, 100%);
         margin: 0 40px 0 20px;
     }
     .work-col:nth-child(1){
@@ -395,37 +416,41 @@ i{
     .work-col:nth-child(3){
         grid-column: 1;
         grid-row: 2;
-        -ms-grid-column:3;
-        -ms-grid-row:1;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
     }
     .work-col:nth-child(4){
         grid-column: 2;
         grid-row: 2;
-        -ms-grid-column:1;
+        -ms-grid-column:2;
         -ms-grid-row:2;
     }
     .work-col:nth-child(5){
         grid-column: 1;
         grid-row: 3;
-        -ms-grid-column:2;
-        -ms-grid-row:2;
+        -ms-grid-column:1;
+        -ms-grid-row:3;
 
     }
     .work-col:nth-child(6){
         grid-column: 2;
         grid-row: 3;
-        -ms-grid-column:3;
-        -ms-grid-row:2;
+        -ms-grid-column:2;
+        -ms-grid-row:3;
     }
 }
 @media screen and (max-width: 760px){
     #skills-container{
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 100%);
+        -ms-grid-columns: 100%;
+        -ms-grid-rows: repeat(3, 100%);
     }
     .skill-col:nth-child(1){
         grid-column: 1;
         grid-row: 1;
+        -ms-grid-column:1;
+        -ms-grid-row:1;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 0;
@@ -434,6 +459,8 @@ i{
     .skill-col:nth-child(2){
         grid-column: 1;
         grid-row: 2;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
         border: 0;
         border-left: 1px #d5d5d5 solid;
         border-right: 1px #d5d5d5 solid;
@@ -441,6 +468,8 @@ i{
     .skill-col:nth-child(3){
         grid-column: 1;
         grid-row: 3;
+        -ms-grid-column:1;
+        -ms-grid-row:3;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: 20px;
@@ -449,7 +478,9 @@ i{
     #work-container{
         max-width: 770px;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(6, 460px);
+        grid-template-rows: repeat(6, 100%);
+        -ms-grid-columns: 100%;
+        -ms-grid-rows: repeat(6, 100%);
         margin: 0 20px;
     }
     .work-col:nth-child(1){
@@ -461,50 +492,35 @@ i{
     .work-col:nth-child(2){
         grid-column: 1;
         grid-row: 2;
-        -ms-grid-column:2;
-        -ms-grid-row:1;
+        -ms-grid-column:1;
+        -ms-grid-row:2;
     }
     .work-col:nth-child(3){
         grid-column: 1;
         grid-row: 3;
-        -ms-grid-column:3;
-        -ms-grid-row:1;
+        -ms-grid-column:1;
+        -ms-grid-row:3;
     }
     .work-col:nth-child(4){
         grid-column: 1;
         grid-row: 4;
         -ms-grid-column:1;
-        -ms-grid-row:2;
+        -ms-grid-row:4;
     }
     .work-col:nth-child(5){
         grid-column: 1;
         grid-row: 5;
-        -ms-grid-column:2;
-        -ms-grid-row:2;
+        -ms-grid-column:1;
+        -ms-grid-row:5;
     }
     .work-col:nth-child(6){
         grid-column: 1;
         grid-row: 6;
-        -ms-grid-column:3;
-        -ms-grid-row:2;
+        -ms-grid-column:1;
+        -ms-grid-row:6;
     }
     .learn-more-btn, .visit-website-btn{
         padding: 10px 20px;
-    }
-}
-@media screen and (max-width: 560px){
-    #work-container{
-        grid-template-rows: repeat(6, 420px);
-    }
-}
-@media screen and (max-width: 660px){
-    #work-container{
-        grid-template-rows: repeat(6, 360px);
-    }
-}
-@media screen and (max-width: 560px){
-    #work-container{
-        grid-template-rows: repeat(6, 300px);
     }
 }
 @media screen and (max-width: 460px){
@@ -517,7 +533,6 @@ i{
     p{
         font-size: 1.4em;
     }
-    #work-container{
-        grid-template-rows: repeat(6, 240px);
-    }
 }
+
+
