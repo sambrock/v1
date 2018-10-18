@@ -177,7 +177,7 @@ header #logo {
     display: grid;
     display:-ms-grid;
     grid-template-columns: repeat(3, 386.66px);
-    grid-template-rows: repeat(2, 100%);
+    grid-template-rows: repeat(2, auto);
     -ms-grid-columns: repeat(3, 386.66px);
     -ms-grid-rows: repeat(2, 100%);
     grid-gap: 20px;
@@ -381,7 +381,7 @@ i{
     }
     #work-container{
         grid-template-columns: repeat(3, 320px);
-        grid-template-rows: repeat(2, 100%);
+        grid-template-rows: repeat(2, auto);
         -ms-grid-columns: repeat(3, 320px);
         -ms-grid-rows: repeat(2, 100%);
     }
@@ -396,7 +396,7 @@ i{
     #work-container{
         max-width: 1020px;
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(3, 100%);
+        grid-template-rows: repeat(3, auto);
         -ms-grid-columns: repeat(2, 50%);
         -ms-grid-rows: repeat(3, 100%);
         margin: 0 40px 0 20px;
@@ -442,7 +442,7 @@ i{
 @media screen and (max-width: 760px){
     #skills-container{
         grid-template-columns: 100%;
-        grid-template-rows: repeat(3, 100%);
+        grid-template-rows: repeat(3, auto);
         -ms-grid-columns: 100%;
         -ms-grid-rows: repeat(3, 100%);
     }
@@ -478,7 +478,7 @@ i{
     #work-container{
         max-width: 770px;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(6, 100%);
+        grid-template-rows: repeat(6, auto);
         -ms-grid-columns: 100%;
         -ms-grid-rows: repeat(6, 100%);
         margin: 0 20px;
