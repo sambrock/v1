@@ -344,7 +344,7 @@ footer{
     border-radius: 100%;
     border: 2px solid #fff;
     text-align: center;
-    margin: 0 15px;
+    margin: 0 10px;
     transition: all 0.3s ease-in-out;
 }
 .social-btn:hover{
