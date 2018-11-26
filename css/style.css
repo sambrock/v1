@@ -522,6 +522,9 @@ i{
     .learn-more-btn, .visit-website-btn{
         padding: 10px 20px;
     }
+    .social-btn{
+        margin: 0 2px;
+    }
 }
 @media screen and (max-width: 460px){
     header #logo{
